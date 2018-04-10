@@ -1,0 +1,15 @@
+<h1>Dom's Sample App</h1>
+
+<p>Howdy <%= @user.name %>,</p>
+
+<p>
+  Welcome to Dom's Sample App! Clicking the link below will activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+                                                    
+<p>
+  If you did not create an account on Dom's Sample App or you believe you have
+  received this message in error, disregard this email.
+</p>
